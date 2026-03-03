@@ -31,3 +31,6 @@ Route::get('/level', [LevelController::class, 'index']);
 
 //praktikum 5
 Route::get('/kategori', [KategoriController::class, 'index']);
+
+//praktikum6
+Route::get('/user', [UserController::class, 'index']);

@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\UserModel;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function show($id, $name) {
-        return "<h1>Profil Pengguna</h1><p>ID: $id</p><p>Nama: $name</p>";
+    public function index()
+    {
+        // Coba akses model UserModel
+        $user = UserModel::all(); // Ambil semua data dari tabel m_user
+        return view('user', ['data' => $user]);
     }
 }
