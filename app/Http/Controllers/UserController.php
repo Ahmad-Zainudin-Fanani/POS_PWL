@@ -12,13 +12,19 @@ class UserController extends Controller
     public function index()
     {
         // Langkah 8: Tambah data user dengan Eloquent Model
-        $data = [
-            'username' => 'customer-1',
-            'nama' => 'Pelanggan',
-            'password' => Hash::make('12345'), // Mengenkripsi password
-            'level_id' => 1
-        ];
-        UserModel::insert($data); // Tambahkan data ke tabel m_user
+        // $data = [
+        //     'level_id' => 2,
+        //     'username' => 'manager_dua',
+        //     'nama' => 'Manager 2',
+        //     'password' => Hash::make('12345')
+        // ];
+            $data = [
+                'level_id' => 2,
+                'username' => 'manager_tiga',
+                'nama' => 'Manager 3',
+                'password' => Hash::make('12345')
+            ];
+            UserModel::create($data);
         
 
         // Langkah 10: Update data user
